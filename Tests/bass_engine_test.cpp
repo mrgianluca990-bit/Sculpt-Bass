@@ -142,10 +142,11 @@ void testEmptyAndSelection() {
 
 void testAnchorsAndTuning() {
     std::array<std::vector<float>, 5> anchors;
+    constexpr std::array<float, 5> positions{0.0f, 0.25f, 0.40f, 0.65f, 1.0f};
     for (int anchor = 0; anchor < 5; ++anchor) {
         BassEngine engine;
         engine.setSamples(bank());
-        engine.setMorph(static_cast<float>(anchor) * 0.25f);
+        engine.setMorph(positions[static_cast<std::size_t>(anchor)]);
         engine.prepare(sampleRate);
         engine.noteOn(40, 0.9f);
         anchors[static_cast<std::size_t>(anchor)] = render(engine, 24000);
@@ -272,7 +273,7 @@ void testContinuousMorphAndBlocks() {
     // the earlier sine/sparse synth. Compare automation against those same waves
     // held at fixed timbre, rather than treating their intended edge as a click.
     float fixedTimbreJump = 0.0f;
-    for (float morph : {0.5f, 0.75f, 1.0f}) {
+    for (float morph : {0.40f, 0.65f, 1.0f}) {
         BassEngine fixed;
         fixed.setSamples(bank());
         fixed.setMorph(morph);
@@ -307,7 +308,7 @@ void testContinuousMorphAndBlocks() {
     // the harmonic coefficients while the amplitude is still nonzero.
     BassEngine held;
     held.setSamples(bank());
-    held.setMorph(0.75f);
+    held.setMorph(0.65f);
     held.prepare(sampleRate);
     held.noteOn(40, 0.85f);
     render(held, 20000);
