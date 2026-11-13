@@ -1,0 +1,1213 @@
+{
+  "name": "Darkblack fingerstyle selection",
+  "upstreamRepository": "https://github.com/sfzinstruments/karoryfer.black-and-blue-basses",
+  "upstreamCommit": "6e7d674cdb41be7a54dbccb15472401ad01099b9",
+  "license": "CC0-1.0",
+  "version": 1,
+  "sampleRate": 44100,
+  "encoding": "mono PCM16",
+  "description": "15 sampled pitches, 2 dynamics, 4 recorded round robins; original acoustic pitch mapped to MIDI (B0 = 23).",
+  "processing": "Leading silence trimmed; DC offset removed; 1 ms attack / 25 ms tail fade; shared level calibration per root note; PCM16 conversion.",
+  "sampleFiles": [
+    {
+      "file": "bass_023_v0_rr0.wav",
+      "rootNote": 23,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b1_mp_rr1.wav",
+      "sourceBlobSha": "6a5cbe73d0767fda339fcb567a3721d55776eea2",
+      "frames": 220500,
+      "sha256": "506b4e57dd2f06d9e3965e11aa1ca49d2263c71b2c21ac56221ca3e27ea7fd76"
+    },
+    {
+      "file": "bass_023_v0_rr1.wav",
+      "rootNote": 23,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b1_mp_rr2.wav",
+      "sourceBlobSha": "4e68821c4312833ced9d0c4c93d18ade14abfd91",
+      "frames": 220500,
+      "sha256": "cf32c649302ce93811e8e332cd27e4ab90452d811d5fc10be138d011523c3aa4"
+    },
+    {
+      "file": "bass_023_v0_rr2.wav",
+      "rootNote": 23,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b1_mp_rr3.wav",
+      "sourceBlobSha": "bec6cc7f1704dc2b84ba7d57949ffcb8944b1c3e",
+      "frames": 220500,
+      "sha256": "1136b25461a67f3ddeb2fea35e9d6ce8ade92fdf2b28fcb6ecb8c84eb19a250a"
+    },
+    {
+      "file": "bass_023_v0_rr3.wav",
+      "rootNote": 23,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b1_mp_rr4.wav",
+      "sourceBlobSha": "1eb78157e6384b7b57bf28b55ea0b7e46bb27e58",
+      "frames": 220500,
+      "sha256": "af25b5adf08f9a753f1ead4fc38538a585213dc2171f819b707ae355c12a3815"
+    },
+    {
+      "file": "bass_023_v1_rr0.wav",
+      "rootNote": 23,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b1_f_rr1.wav",
+      "sourceBlobSha": "b285a1b1e0152f23a25ae1e78c49802f1e17210a",
+      "frames": 220460,
+      "sha256": "7e7d444f0d760f6f83f9b4d4c64e2e8f6094b80a589c73b4b134cc1946d5c775"
+    },
+    {
+      "file": "bass_023_v1_rr1.wav",
+      "rootNote": 23,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b1_f_rr2.wav",
+      "sourceBlobSha": "35d09aba857991065f6ce3a6ce6b5698a3c8cb2b",
+      "frames": 220500,
+      "sha256": "831b1d4e768112f21e6791f8f054dcaa9eeec741b8b4914f33ce193ee3921855"
+    },
+    {
+      "file": "bass_023_v1_rr2.wav",
+      "rootNote": 23,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b1_f_rr3.wav",
+      "sourceBlobSha": "c4b023d69fc238822d5816b858aa4760358d6173",
+      "frames": 220449,
+      "sha256": "839c0e24b5d1aa6bccb2eaf31d5b629b84fa3a862c55ad2ee1c0139ff0cb3a65"
+    },
+    {
+      "file": "bass_023_v1_rr3.wav",
+      "rootNote": 23,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b1_f_rr4.wav",
+      "sourceBlobSha": "b249bde7e0fbc3060e5d2d5e285decf6d2d59799",
+      "frames": 220500,
+      "sha256": "bbe195fef0b2717c455cf2e5329a5ed1ea2a16c6e2aaa38663bc2d638d120ba3"
+    },
+    {
+      "file": "bass_026_v0_rr0.wav",
+      "rootNote": 26,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d2_mp_rr1.wav",
+      "sourceBlobSha": "43341c43eae92977516e10f40e6ac2024bb561e1",
+      "frames": 220500,
+      "sha256": "f7c72ea349737e39964031146b54973562de81c4db11a0b5b27404030d65d084"
+    },
+    {
+      "file": "bass_026_v0_rr1.wav",
+      "rootNote": 26,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d2_mp_rr2.wav",
+      "sourceBlobSha": "ef2f4f840d00ba545b1de4476b087a8ce8242544",
+      "frames": 220500,
+      "sha256": "df3be440231d68f7883feef8b68f757161cf010654d190890a6b896894ce650e"
+    },
+    {
+      "file": "bass_026_v0_rr2.wav",
+      "rootNote": 26,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d2_mp_rr3.wav",
+      "sourceBlobSha": "165fe56dc96ee147d4d4b98253ae4bdc1b680134",
+      "frames": 220500,
+      "sha256": "0e1f7de768259c4e9642e7cfb74da6073c4520ea02b6e251fa4c2643de58636f"
+    },
+    {
+      "file": "bass_026_v0_rr3.wav",
+      "rootNote": 26,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d2_mp_rr4.wav",
+      "sourceBlobSha": "d5618770ae97a48fb92656be454fb5b21b29c3bc",
+      "frames": 220500,
+      "sha256": "17e76c06af663360f31c3ee73f6b8fcbbf22e4138ed077059f0f08359e6d8701"
+    },
+    {
+      "file": "bass_026_v1_rr0.wav",
+      "rootNote": 26,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d2_f_rr1.wav",
+      "sourceBlobSha": "f1b638409b160051172fa6ca6c0e03a004f37ac0",
+      "frames": 220500,
+      "sha256": "2a6362f487d51dbe6e611d8334bf127ae90c03fd4f87daa7821e3ca5b744f888"
+    },
+    {
+      "file": "bass_026_v1_rr1.wav",
+      "rootNote": 26,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d2_f_rr2.wav",
+      "sourceBlobSha": "dafface6040a5c068ed22f62e05f6c6dc7e485f6",
+      "frames": 220500,
+      "sha256": "eb51ebd9f248e5d54cfae31f3c8bd501c15da51f9954005e3fc1566df6ba1878"
+    },
+    {
+      "file": "bass_026_v1_rr2.wav",
+      "rootNote": 26,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d2_f_rr3.wav",
+      "sourceBlobSha": "aa4555fe2c19faa84c3b9cb4269d9594e94748b0",
+      "frames": 220472,
+      "sha256": "a49a4d67238c60574301539ddcb6402885fdf6b3dc98da76071a54e41ef5bab1"
+    },
+    {
+      "file": "bass_026_v1_rr3.wav",
+      "rootNote": 26,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d2_f_rr4.wav",
+      "sourceBlobSha": "f80f8c7bf24e22e57ff2bb3f5359af4d1925d064",
+      "frames": 220500,
+      "sha256": "a52d319094a66b965ee0e0aa609283cfd9de45a40124d34a7bccac00c6122b47"
+    },
+    {
+      "file": "bass_029_v0_rr0.wav",
+      "rootNote": 29,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f2_mp_rr1.wav",
+      "sourceBlobSha": "4db80f21ede1c6ab9d0b5526435849c4e6d36d13",
+      "frames": 220500,
+      "sha256": "3b39bb601f28b8579f776c8209c0cbd2beed9b0fad00e01b89e6a793775a4d8b"
+    },
+    {
+      "file": "bass_029_v0_rr1.wav",
+      "rootNote": 29,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f2_mp_rr2.wav",
+      "sourceBlobSha": "cd3d05f4bd1fb8ed0649e48d039513d6570c1965",
+      "frames": 220500,
+      "sha256": "6583a00e1ec6f45447728f53ac6ed207dbdc10c093a4afb636381ebfd9c4db6c"
+    },
+    {
+      "file": "bass_029_v0_rr2.wav",
+      "rootNote": 29,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f2_mp_rr3.wav",
+      "sourceBlobSha": "936976365af472a89ba3ab3b5c1ab5bf7f6f38ac",
+      "frames": 220500,
+      "sha256": "67f97350127e99afdeefdbfe9616753079e7e01b4a15fe944ce10f6efb60a37e"
+    },
+    {
+      "file": "bass_029_v0_rr3.wav",
+      "rootNote": 29,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f2_mp_rr4.wav",
+      "sourceBlobSha": "88eb39d6b6fb1feeaf7b466d455787e44f84b2df",
+      "frames": 220500,
+      "sha256": "97e61fc27566e86822fe585756dd6a41841d9c08ebfe0fb61184069cbb84bc5c"
+    },
+    {
+      "file": "bass_029_v1_rr0.wav",
+      "rootNote": 29,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f2_f_rr1.wav",
+      "sourceBlobSha": "8880fc4dc261e2fdc57d8f0eefbea3996e6f6be4",
+      "frames": 220500,
+      "sha256": "ef3d1a3afd7c01e4f60e3424857ea9a006fc5db8dfc411144c1dad717ee3a655"
+    },
+    {
+      "file": "bass_029_v1_rr1.wav",
+      "rootNote": 29,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f2_f_rr2.wav",
+      "sourceBlobSha": "5bf477e9a7082b6b5fe9d47a5203afa0c198cd77",
+      "frames": 220480,
+      "sha256": "0c5652aa449d34d5e576dc5560cce9ab7e79b24e4066c1c03819031f3626125c"
+    },
+    {
+      "file": "bass_029_v1_rr2.wav",
+      "rootNote": 29,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f2_f_rr3.wav",
+      "sourceBlobSha": "515dac221a19ede6cfcfb8c4f86b491b88b0948b",
+      "frames": 220500,
+      "sha256": "e398b5f3577ea56c66b70b26ed3398c7942ae78c31ff860a1898c9630e825ae0"
+    },
+    {
+      "file": "bass_029_v1_rr3.wav",
+      "rootNote": 29,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f2_f_rr4.wav",
+      "sourceBlobSha": "4f657a7c82543ab1093b27aba46e04ceb91f5343",
+      "frames": 220500,
+      "sha256": "e3ff6db1d93071e7e4437bd4d2f6c6447a14a4e3d7c49ad474ff25444b5b67e4"
+    },
+    {
+      "file": "bass_032_v0_rr0.wav",
+      "rootNote": 32,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab2_mp_rr1.wav",
+      "sourceBlobSha": "0324c9b474d7649ddd068e521d8d03f3b240632e",
+      "frames": 220500,
+      "sha256": "62cb6df7cb176b85da174ae9b446dcabf52cdad797248b3947f4844c1b63bb26"
+    },
+    {
+      "file": "bass_032_v0_rr1.wav",
+      "rootNote": 32,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab2_mp_rr2.wav",
+      "sourceBlobSha": "dea3f9ca91f7b2c49474264d9bda1b39f1481323",
+      "frames": 220500,
+      "sha256": "e4c6fc954f5c7d60d90768f3479585617f838379bb99dc8c4cf951c78923e433"
+    },
+    {
+      "file": "bass_032_v0_rr2.wav",
+      "rootNote": 32,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab2_mp_rr3.wav",
+      "sourceBlobSha": "6d52dce7a7b518a7a24a3c305312b79c81ccd7e2",
+      "frames": 220500,
+      "sha256": "f453947749182a3503bdb8c09f1c693edff5248dbb4ef771380e117400c6cf8b"
+    },
+    {
+      "file": "bass_032_v0_rr3.wav",
+      "rootNote": 32,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab2_mp_rr4.wav",
+      "sourceBlobSha": "f7778a768cb7b3f8a8b46a1813056849c146c1c6",
+      "frames": 220500,
+      "sha256": "52562eea6344548f7505f1b971b0166ab19e7282f2eee335021957bd7db782aa"
+    },
+    {
+      "file": "bass_032_v1_rr0.wav",
+      "rootNote": 32,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab2_f_rr1.wav",
+      "sourceBlobSha": "c9d1467eae4254dd39a9bc91c62dba70239b67bf",
+      "frames": 220500,
+      "sha256": "942b6f3866a81139404fd58037225c9c84beab473dbff28c52118cc7ffc0fb7b"
+    },
+    {
+      "file": "bass_032_v1_rr1.wav",
+      "rootNote": 32,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab2_f_rr2.wav",
+      "sourceBlobSha": "5d3bb974aaf075fe68b230f129cd6e8905ed6ed0",
+      "frames": 220500,
+      "sha256": "afc6252f29581b121d07be7e89b5731d5d4037c946dfb06d116dbadf06b2eccc"
+    },
+    {
+      "file": "bass_032_v1_rr2.wav",
+      "rootNote": 32,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab2_f_rr3.wav",
+      "sourceBlobSha": "6cda38d3da904749ccf1a82ad032dad8a2d4a778",
+      "frames": 220500,
+      "sha256": "138a31e3b78c6af861d74cca1ca10930934d308dc7248c973b41475bc7008868"
+    },
+    {
+      "file": "bass_032_v1_rr3.wav",
+      "rootNote": 32,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab2_f_rr4.wav",
+      "sourceBlobSha": "11b25ae59954c13123d0d16e864334ee3756f8cb",
+      "frames": 220500,
+      "sha256": "58a824643582a360e9ae5aab597bed93bba7a8e661fd20cb93d13a87601db627"
+    },
+    {
+      "file": "bass_035_v0_rr0.wav",
+      "rootNote": 35,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b2_mp_rr1.wav",
+      "sourceBlobSha": "805afcca7e06f949276636403c82787cc750843e",
+      "frames": 220500,
+      "sha256": "636b7423426fac834a63b8135a37bff79da85c7bea46fa94f060466349aae5b2"
+    },
+    {
+      "file": "bass_035_v0_rr1.wav",
+      "rootNote": 35,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b2_mp_rr2.wav",
+      "sourceBlobSha": "d70e6f1bc725ca72593d97b44405299ae32560be",
+      "frames": 220500,
+      "sha256": "c21326e6260e8bce5be695fe3357dd7e2b501d19616953a525dc3401777326ab"
+    },
+    {
+      "file": "bass_035_v0_rr2.wav",
+      "rootNote": 35,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b2_mp_rr3.wav",
+      "sourceBlobSha": "76b3aeb061156006c019e6c73e9984ada4b1b37f",
+      "frames": 220489,
+      "sha256": "83f1f22f83730742bbc49b4b3e4774135e1f8d8f752754ff54c3b6883d163d65"
+    },
+    {
+      "file": "bass_035_v0_rr3.wav",
+      "rootNote": 35,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b2_mp_rr4.wav",
+      "sourceBlobSha": "0ed9cf17a11efd019e23515e9c807fddc27a3b9c",
+      "frames": 220500,
+      "sha256": "3502bdd9e875788ab7447babdd68e7c9df143fac6e20cf1b2a5d2fd2c6fae614"
+    },
+    {
+      "file": "bass_035_v1_rr0.wav",
+      "rootNote": 35,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b2_f_rr1.wav",
+      "sourceBlobSha": "316b2f3382599d3d4e51628f357b367d7700eaa1",
+      "frames": 220500,
+      "sha256": "989126c5addfd1fd9a9627cee6b2de29c1142094a3b93e4f3d8d154c43943957"
+    },
+    {
+      "file": "bass_035_v1_rr1.wav",
+      "rootNote": 35,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b2_f_rr2.wav",
+      "sourceBlobSha": "46ff41329669628ee94003f8c17ff526bde7a1c5",
+      "frames": 220500,
+      "sha256": "635779f38307213add0e0f4ce4cc03710c3468c372ba41ce0b7732b24bef92cb"
+    },
+    {
+      "file": "bass_035_v1_rr2.wav",
+      "rootNote": 35,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b2_f_rr3.wav",
+      "sourceBlobSha": "c7bdcdc8579b08d8b3f6839bfdc93534aaf0e5dd",
+      "frames": 220500,
+      "sha256": "0333910d146d84f0920faec6403e227e2496653d080a6226d87bdfe470e56a98"
+    },
+    {
+      "file": "bass_035_v1_rr3.wav",
+      "rootNote": 35,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b2_f_rr4.wav",
+      "sourceBlobSha": "8865d8affed399f19536e17c7f21fdacaa728487",
+      "frames": 220500,
+      "sha256": "313613c5fb6686b640656406611bdce14e0aa0c379435e6a172cf23557d69901"
+    },
+    {
+      "file": "bass_038_v0_rr0.wav",
+      "rootNote": 38,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d3_mp_rr1.wav",
+      "sourceBlobSha": "64e617d510201cefdd6d0a5d06cc62b22389e0f0",
+      "frames": 220500,
+      "sha256": "695ca4aca31ecdfb3dcd3e493516ff619fa4912cd1cd0b83a2cdb04d0f9b5202"
+    },
+    {
+      "file": "bass_038_v0_rr1.wav",
+      "rootNote": 38,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d3_mp_rr2.wav",
+      "sourceBlobSha": "8fa861b5e3695770f2db29fa038ba54529ec9720",
+      "frames": 220500,
+      "sha256": "b15740f8d5067f5533bda67c0ae27414fc334353ee3f9329f02fdd88fb65c24b"
+    },
+    {
+      "file": "bass_038_v0_rr2.wav",
+      "rootNote": 38,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d3_mp_rr3.wav",
+      "sourceBlobSha": "287f82978205c223f76834850a26235fca11ff23",
+      "frames": 220500,
+      "sha256": "c1af65c549ffc0f775af57e40af9a4f9fba3be2a39fb170120b6100053d9e4d4"
+    },
+    {
+      "file": "bass_038_v0_rr3.wav",
+      "rootNote": 38,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d3_mp_rr4.wav",
+      "sourceBlobSha": "d20b7c1645c52cdfd533d7fefd3fd5c08851e9e2",
+      "frames": 220500,
+      "sha256": "434a01b85b60d18a82cda75fb01352fdbd76c7a69c610c11689a4f9e1c013fbf"
+    },
+    {
+      "file": "bass_038_v1_rr0.wav",
+      "rootNote": 38,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d3_f_rr1.wav",
+      "sourceBlobSha": "578d2002e7313fb90311ae36db1024235d00e1f8",
+      "frames": 220500,
+      "sha256": "a4fe680c105ba33be82e414b8ca0ceb1e20af56388706bc6efc9ef7cbe3a2214"
+    },
+    {
+      "file": "bass_038_v1_rr1.wav",
+      "rootNote": 38,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d3_f_rr2.wav",
+      "sourceBlobSha": "e0d4242b85c329f27e6a9413bd7b34474bae08e4",
+      "frames": 220500,
+      "sha256": "4344f9a4243f49d3a8d1e692e2e98e1a24832727e142f25e85318b5ae73e1817"
+    },
+    {
+      "file": "bass_038_v1_rr2.wav",
+      "rootNote": 38,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d3_f_rr3.wav",
+      "sourceBlobSha": "e9d8ca64084c87af98ad24b273bb2e316057bd4e",
+      "frames": 220500,
+      "sha256": "14d49cce65eabdde069194605bed3c35afdb6607c493f2731db9b9c880cfbf46"
+    },
+    {
+      "file": "bass_038_v1_rr3.wav",
+      "rootNote": 38,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d3_f_rr4.wav",
+      "sourceBlobSha": "bba05b39b991128f08ee3101dac540085f87c940",
+      "frames": 220500,
+      "sha256": "4a63915ddb97386600284a94bdaa47d61a43e1217c225bf73a3097b69c2e729c"
+    },
+    {
+      "file": "bass_041_v0_rr0.wav",
+      "rootNote": 41,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f3_mp_rr1.wav",
+      "sourceBlobSha": "e8302fb379eaeee0ec220692d1e5ea6bede68f37",
+      "frames": 220471,
+      "sha256": "a986549c03d463b2446eba846d419dcbec43092173d6ed0d79034b5b1ed1f3a8"
+    },
+    {
+      "file": "bass_041_v0_rr1.wav",
+      "rootNote": 41,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f3_mp_rr2.wav",
+      "sourceBlobSha": "bbd025feea7874e8f3baa02f034739283be539a6",
+      "frames": 220500,
+      "sha256": "94a81a1d2d2b52c0b4f96764cac4d471cff8c78a8797caf3a5b4f888154523c4"
+    },
+    {
+      "file": "bass_041_v0_rr2.wav",
+      "rootNote": 41,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f3_mp_rr3.wav",
+      "sourceBlobSha": "456877ae29dc71682796341d389d32336154aa02",
+      "frames": 220500,
+      "sha256": "7c7a31bb165bd33b3a4b62f875937c625158204504778db80bd2aee88a2d2381"
+    },
+    {
+      "file": "bass_041_v0_rr3.wav",
+      "rootNote": 41,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f3_mp_rr4.wav",
+      "sourceBlobSha": "04bbfe1ce79563039256e5fdfaed8ed67d8830d4",
+      "frames": 220500,
+      "sha256": "2611e65b4b50a6da5ccdb4aa4717fb48aa2152c584a14c5bb3e7b4f0c5239cbc"
+    },
+    {
+      "file": "bass_041_v1_rr0.wav",
+      "rootNote": 41,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f3_f_rr1.wav",
+      "sourceBlobSha": "28453a2df39fc8b8c588145c4ee40e6311ffd579",
+      "frames": 220500,
+      "sha256": "9d4fbce2e479339883cc09714bc37922af8bdf0db374a6e17daeadc8c6f78dd8"
+    },
+    {
+      "file": "bass_041_v1_rr1.wav",
+      "rootNote": 41,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f3_f_rr2.wav",
+      "sourceBlobSha": "38d25a5f1aa4f9951855221b39247c726c802e4b",
+      "frames": 220500,
+      "sha256": "5647893b3d1c9c39597433c349782a49147ed33d5c947ca5effa31c39bc82ad7"
+    },
+    {
+      "file": "bass_041_v1_rr2.wav",
+      "rootNote": 41,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f3_f_rr3.wav",
+      "sourceBlobSha": "51766b74f59587dfa32fd417f33932c39050981b",
+      "frames": 220500,
+      "sha256": "ba2604c3819602a6e4728b19d751bf921a922e329eeaef09c4f9153570830dd9"
+    },
+    {
+      "file": "bass_041_v1_rr3.wav",
+      "rootNote": 41,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f3_f_rr4.wav",
+      "sourceBlobSha": "d049203a125317cdc3386a1ac0e72369587e635b",
+      "frames": 220500,
+      "sha256": "9bde0672f5ea7e8a5694870185ce25b6042b8fa4315033bb58f49afaa435c586"
+    },
+    {
+      "file": "bass_044_v0_rr0.wav",
+      "rootNote": 44,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab3_mp_rr1.wav",
+      "sourceBlobSha": "a11d0931fc155dbb16a554e262323939e2e90f16",
+      "frames": 220500,
+      "sha256": "d6ce580d0230965af6168b5527720c5bb8267ef6b5d60e59aa70db959af7dd95"
+    },
+    {
+      "file": "bass_044_v0_rr1.wav",
+      "rootNote": 44,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab3_mp_rr2.wav",
+      "sourceBlobSha": "4f64f86ca41912625084e838eac437a88c248e3f",
+      "frames": 220500,
+      "sha256": "5bb9cbaaec4b245cd58a2befa47f14309cf123769309c8281c50c9ac1551d7e9"
+    },
+    {
+      "file": "bass_044_v0_rr2.wav",
+      "rootNote": 44,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab3_mp_rr3.wav",
+      "sourceBlobSha": "c199889b317ec372693b4cd1a163ef9442f2df60",
+      "frames": 220500,
+      "sha256": "2bfa83059c92b0198f696d1abab919fb5aaa8cfdcf8a128c866aa8a1c4b6c27b"
+    },
+    {
+      "file": "bass_044_v0_rr3.wav",
+      "rootNote": 44,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab3_mp_rr4.wav",
+      "sourceBlobSha": "d2e168c9686020453e334e316306fde2eafc220c",
+      "frames": 220500,
+      "sha256": "05654b744cafe660b78abaef0257638c0160e0f7df97f1ef4520118699a2342a"
+    },
+    {
+      "file": "bass_044_v1_rr0.wav",
+      "rootNote": 44,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab3_f_rr1.wav",
+      "sourceBlobSha": "81025c267f086f0c4a30154cc72348bb0df0f8e6",
+      "frames": 220500,
+      "sha256": "19f1638ab8337e4f0dedd0875181459147205904d2090db4470bd019c7bbb1aa"
+    },
+    {
+      "file": "bass_044_v1_rr1.wav",
+      "rootNote": 44,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab3_f_rr2.wav",
+      "sourceBlobSha": "7b99976548534f40be6810d09715e985e16b1b6b",
+      "frames": 220500,
+      "sha256": "befff92996e23dffb9c3334d27ce85cccb9395feec9b702ea9a5de3ad16a36fc"
+    },
+    {
+      "file": "bass_044_v1_rr2.wav",
+      "rootNote": 44,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab3_f_rr3.wav",
+      "sourceBlobSha": "4213e39436fcfc9d80b307e00499947fc61e4c7c",
+      "frames": 220500,
+      "sha256": "a3b6616f5d2ebdf810855219028f89abe349bc9c051f16fde89f9e53540acd0f"
+    },
+    {
+      "file": "bass_044_v1_rr3.wav",
+      "rootNote": 44,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab3_f_rr4.wav",
+      "sourceBlobSha": "23b16ac9b6544b61c57b4ab90c85566a8b283e4c",
+      "frames": 220500,
+      "sha256": "d632d701541ae414f666c43592dd60cbbcc60c75dcf8f91173df14e6b080454a"
+    },
+    {
+      "file": "bass_047_v0_rr0.wav",
+      "rootNote": 47,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b3_mp_rr1.wav",
+      "sourceBlobSha": "00de191af41d0f0b29f7fc8854e8ba988431c734",
+      "frames": 220500,
+      "sha256": "fb9f258a3adbfb7b9414eded377a90163b73e9ae0eb90db3de545ba621f635f9"
+    },
+    {
+      "file": "bass_047_v0_rr1.wav",
+      "rootNote": 47,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b3_mp_rr2.wav",
+      "sourceBlobSha": "a485d3b875ca144ca9b5f745820ac963d5717c04",
+      "frames": 220500,
+      "sha256": "65acf5f035ab6043928d0471dc39d9f6dc864f97784abe4bc35148eb0205b8f1"
+    },
+    {
+      "file": "bass_047_v0_rr2.wav",
+      "rootNote": 47,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b3_mp_rr3.wav",
+      "sourceBlobSha": "f3d602c30f9538547acd0a078dfeff0f27eb2a20",
+      "frames": 220500,
+      "sha256": "21b4a31e49f18d8df8c4e4fcff9b5dd39f3c0aab6f9e4843e4d00dbfee295b92"
+    },
+    {
+      "file": "bass_047_v0_rr3.wav",
+      "rootNote": 47,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b3_mp_rr4.wav",
+      "sourceBlobSha": "1027bcf46f5e04a3a0b51a1b1c61e215589e77bb",
+      "frames": 220479,
+      "sha256": "4426e22ff0610d98ec50991d3970223ba9fc6579eb45c48063f0fd6bd26e970d"
+    },
+    {
+      "file": "bass_047_v1_rr0.wav",
+      "rootNote": 47,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b3_f_rr1.wav",
+      "sourceBlobSha": "da3c9724f362fde58b2ca9382948fa4144a40f7e",
+      "frames": 220500,
+      "sha256": "c7be8a13f98a3f741f6c3ec5153d27c8927afb7c49f54dfedf813c1926ee5724"
+    },
+    {
+      "file": "bass_047_v1_rr1.wav",
+      "rootNote": 47,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b3_f_rr2.wav",
+      "sourceBlobSha": "aa40b7042d8b3fc8d552c3516e89aee96fc98942",
+      "frames": 220500,
+      "sha256": "45a89d62c218d493265a6010b5776cca6471ab8cb73bbdd03bb348645578e9ac"
+    },
+    {
+      "file": "bass_047_v1_rr2.wav",
+      "rootNote": 47,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b3_f_rr3.wav",
+      "sourceBlobSha": "7e42c2a96b72c68d2a205df4babef67f964a0a66",
+      "frames": 220500,
+      "sha256": "449fffc393717056d4021a6e0f516075dd2693d635ac6ddc524c747d9206e0c7"
+    },
+    {
+      "file": "bass_047_v1_rr3.wav",
+      "rootNote": 47,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b3_f_rr4.wav",
+      "sourceBlobSha": "869c852fbed54e313dd2d565e5f5d941adaef884",
+      "frames": 220497,
+      "sha256": "fe2a0970491c6021c270ba3760fb5e0a8181e29d7b6b4c8e7816e8c1fcf3da48"
+    },
+    {
+      "file": "bass_050_v0_rr0.wav",
+      "rootNote": 50,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d4_mp_rr1.wav",
+      "sourceBlobSha": "7766beb17199a361b87f30866a31d63956678fb8",
+      "frames": 220500,
+      "sha256": "094f5f87aecd6505baa908f7e79ed2d057da23aeebbd063b040f9d4b532525ed"
+    },
+    {
+      "file": "bass_050_v0_rr1.wav",
+      "rootNote": 50,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d4_mp_rr2.wav",
+      "sourceBlobSha": "7d22abb9b1d2e0ae230ac8e6b4c76a82e360c72c",
+      "frames": 220500,
+      "sha256": "1189b9c2474dab882bbd9f4d92cb25e8ea157f1d7b6b10044f0216a6b982b0e4"
+    },
+    {
+      "file": "bass_050_v0_rr2.wav",
+      "rootNote": 50,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d4_mp_rr3.wav",
+      "sourceBlobSha": "98e49c2428df09f4709da79014c247213beb1f0e",
+      "frames": 220500,
+      "sha256": "8f448c2e9fb67f84c94c499fcf1c8e5b8700c4e8e65dd889fae2a623802178f9"
+    },
+    {
+      "file": "bass_050_v0_rr3.wav",
+      "rootNote": 50,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d4_mp_rr4.wav",
+      "sourceBlobSha": "f46faf82f4d9e920356aa99bf08eafe33610250f",
+      "frames": 220476,
+      "sha256": "219d735251bdabea7defe916e40a23acd4fb76596020c9fc218d8cf06907af23"
+    },
+    {
+      "file": "bass_050_v1_rr0.wav",
+      "rootNote": 50,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d4_f_rr1.wav",
+      "sourceBlobSha": "fecf33a4941a3be5bbffb7220c5051b005e7d47c",
+      "frames": 220500,
+      "sha256": "2f16a7b587a468402c8e2868f3be128116a79203fa914a8a5faadba0043a7bf2"
+    },
+    {
+      "file": "bass_050_v1_rr1.wav",
+      "rootNote": 50,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d4_f_rr2.wav",
+      "sourceBlobSha": "5871420cea5588c464ab98f4754263d2468359a0",
+      "frames": 220500,
+      "sha256": "7fb5e7c067853d5e8d6c0963edb63dc88ab8500c0afb29233efe733b613717f6"
+    },
+    {
+      "file": "bass_050_v1_rr2.wav",
+      "rootNote": 50,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d4_f_rr3.wav",
+      "sourceBlobSha": "dae13054d3f3b48d15de085598bf0a402b0de6d4",
+      "frames": 220500,
+      "sha256": "8dba8c40a5e7cfc3c263643bf8f630a462acc3ac981b6868f54fedcf5a3789a0"
+    },
+    {
+      "file": "bass_050_v1_rr3.wav",
+      "rootNote": 50,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d4_f_rr4.wav",
+      "sourceBlobSha": "046dacaf6eaf242323ead6449e593d174988abd2",
+      "frames": 220500,
+      "sha256": "416c75b0d764ce5feb31dc9ebcbe2c9dd9ed8026ac6bb538f61ed608635d7a02"
+    },
+    {
+      "file": "bass_053_v0_rr0.wav",
+      "rootNote": 53,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f4_mp_rr1.wav",
+      "sourceBlobSha": "463b0db3487151e99b5a3f1f91646a158a267c73",
+      "frames": 220500,
+      "sha256": "4fc9a8ff773581146f7a23db64a5527f2167d5f4fdb798748b340a24a92d43e1"
+    },
+    {
+      "file": "bass_053_v0_rr1.wav",
+      "rootNote": 53,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f4_mp_rr2.wav",
+      "sourceBlobSha": "ea02cd21c76ed863d8e67e2852c8aff60ff28234",
+      "frames": 220500,
+      "sha256": "a0e612c4c1252bf70f120420eaff8dfa7f709dc97a9e1e82d22672d3c816ffd3"
+    },
+    {
+      "file": "bass_053_v0_rr2.wav",
+      "rootNote": 53,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f4_mp_rr3.wav",
+      "sourceBlobSha": "2a1c40b3c29c6457a0a774040d8ceb75204e4992",
+      "frames": 220500,
+      "sha256": "dd1997387c3d866037672239a350c064e84d45277c10dbb3bb5808cb9da51474"
+    },
+    {
+      "file": "bass_053_v0_rr3.wav",
+      "rootNote": 53,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f4_mp_rr4.wav",
+      "sourceBlobSha": "2cd6a1ed5d7ab260cd8409feb1b231d4c67ad5cf",
+      "frames": 220319,
+      "sha256": "6b41f48b3bc8d53d26fdca6d5552b86fbef5904b926227d78d57e2ebc5fc3ca4"
+    },
+    {
+      "file": "bass_053_v1_rr0.wav",
+      "rootNote": 53,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f4_f_rr1.wav",
+      "sourceBlobSha": "9579924c1ff69be0a889023fa2993ba800d25b53",
+      "frames": 220500,
+      "sha256": "e488587dbc3c55d8e4f56d8c500c33c423ce423b84e4c0cc288e544506d0ccdd"
+    },
+    {
+      "file": "bass_053_v1_rr1.wav",
+      "rootNote": 53,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f4_f_rr2.wav",
+      "sourceBlobSha": "5a1e61f92ad13f9979a7a95c1dd6841f2e63e95b",
+      "frames": 220155,
+      "sha256": "8ad4224d58f84dea6e595c838d5d228599d70d6559a8821ef94fe2eae6632883"
+    },
+    {
+      "file": "bass_053_v1_rr2.wav",
+      "rootNote": 53,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f4_f_rr3.wav",
+      "sourceBlobSha": "87762b2b07056d8711d7e594a08b2f6fd52c9245",
+      "frames": 220403,
+      "sha256": "5d146f3e1479fb653f3da4426ef3543ceebb5aace46bad18db5a07fabdf0c024"
+    },
+    {
+      "file": "bass_053_v1_rr3.wav",
+      "rootNote": 53,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_f4_f_rr4.wav",
+      "sourceBlobSha": "79d0272c10963bf002568fa240cbe21ee9c1b4ac",
+      "frames": 220500,
+      "sha256": "fceab9b80514592642023c091c359b589decb0f01c237eafab8b82ffb5044111"
+    },
+    {
+      "file": "bass_056_v0_rr0.wav",
+      "rootNote": 56,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab4_mp_rr1.wav",
+      "sourceBlobSha": "56af37db34cfadc99f2aabfd188fe781843e5905",
+      "frames": 220500,
+      "sha256": "80e098191f498db2845102ee7f4c35cb9cce49d337bcd97eec7d1fa01ff64c0a"
+    },
+    {
+      "file": "bass_056_v0_rr1.wav",
+      "rootNote": 56,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab4_mp_rr2.wav",
+      "sourceBlobSha": "697bf631f6f3074f64fd6c5c75b49e45706083b7",
+      "frames": 220443,
+      "sha256": "101a8890f9c8a2c926d41d5d3b0d7c1e23e29afe42a12ee0efbe9dcb0fd83dea"
+    },
+    {
+      "file": "bass_056_v0_rr2.wav",
+      "rootNote": 56,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab4_mp_rr3.wav",
+      "sourceBlobSha": "bfb07ebb67537de70268708d0500f09a07ba2add",
+      "frames": 220500,
+      "sha256": "460ac7783d1e005e9ba99ab7146c60b88d11a4eee9772a45f155d564ca4fbac1"
+    },
+    {
+      "file": "bass_056_v0_rr3.wav",
+      "rootNote": 56,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab4_mp_rr4.wav",
+      "sourceBlobSha": "010530ca528478b773d1bfc396c82afc746f73ee",
+      "frames": 220500,
+      "sha256": "1732f9c52e528d93e35521232bb90a95b501bd8f5c3591f8407879314d0331c5"
+    },
+    {
+      "file": "bass_056_v1_rr0.wav",
+      "rootNote": 56,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab4_f_rr1.wav",
+      "sourceBlobSha": "cd6ea4fb3a3e9ab04cdcc8e8fddaa3419856dd72",
+      "frames": 220500,
+      "sha256": "6259bb40fc9b2a516497ff5e5c769ddb31a631522924d2dfacb198c445f655ee"
+    },
+    {
+      "file": "bass_056_v1_rr1.wav",
+      "rootNote": 56,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab4_f_rr2.wav",
+      "sourceBlobSha": "42e34bb6b64c27910f58d7b7eb2a44481af0e562",
+      "frames": 220500,
+      "sha256": "607a2efc62a3f4ba3e482e61ddaa2ec78335f2e2eebc021c5613fc6dd34f9fc6"
+    },
+    {
+      "file": "bass_056_v1_rr2.wav",
+      "rootNote": 56,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab4_f_rr3.wav",
+      "sourceBlobSha": "668006fb0801390d8cd7e11a16d7bbafb6842854",
+      "frames": 220500,
+      "sha256": "5042f88e74589946191fafdb65aa614de21437079305de554e98a9508925a04b"
+    },
+    {
+      "file": "bass_056_v1_rr3.wav",
+      "rootNote": 56,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_ab4_f_rr4.wav",
+      "sourceBlobSha": "feb33db6d4dce0586b66739d704fd8f905bad255",
+      "frames": 220500,
+      "sha256": "3677072921ee34ba2497de66fab5000ed8a68f67e67ff9ecd5d47b8389d107e6"
+    },
+    {
+      "file": "bass_059_v0_rr0.wav",
+      "rootNote": 59,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b4_mp_rr1.wav",
+      "sourceBlobSha": "cfae838406694e06b122f75f4fe33683729e060f",
+      "frames": 220500,
+      "sha256": "a57913c0ab913249cd673d7d80a0c7a2a91d83ef082a38f567065a0a8cbc7967"
+    },
+    {
+      "file": "bass_059_v0_rr1.wav",
+      "rootNote": 59,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b4_mp_rr2.wav",
+      "sourceBlobSha": "efb2a8d4449370323c80fac7def48eafe020d9ea",
+      "frames": 220500,
+      "sha256": "f29a755dfffb0fcf28b853831c19771b1a690743c269759f67445acc780759ca"
+    },
+    {
+      "file": "bass_059_v0_rr2.wav",
+      "rootNote": 59,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b4_mp_rr3.wav",
+      "sourceBlobSha": "2a48a9be8f5e41cc80b42a2c1dbfdef0ac8a4169",
+      "frames": 220500,
+      "sha256": "545585dacd61d6682390345228451ce829f15325abea34c78c91e8df43f13227"
+    },
+    {
+      "file": "bass_059_v0_rr3.wav",
+      "rootNote": 59,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b4_mp_rr4.wav",
+      "sourceBlobSha": "f4851792111f1e885e70ffe7755b783e92eea24c",
+      "frames": 220500,
+      "sha256": "6540d6382516b2cb7638daf732a7ec096076d8d69573bc6ecabc6ca655052a42"
+    },
+    {
+      "file": "bass_059_v1_rr0.wav",
+      "rootNote": 59,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b4_f_rr1.wav",
+      "sourceBlobSha": "f9ee3afd43c3049c576c045020dcd81e2ae7aaf0",
+      "frames": 220500,
+      "sha256": "8474640eb850422883c7a1984f70d44e3d691d7e329303719acebf3388587aab"
+    },
+    {
+      "file": "bass_059_v1_rr1.wav",
+      "rootNote": 59,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b4_f_rr2.wav",
+      "sourceBlobSha": "3d1f84943007efdd25143936711aeecf67802276",
+      "frames": 220500,
+      "sha256": "0a5062f0142ca27147e2ad50cb3516b88b9daaa164a497a3e826de294b95ef8d"
+    },
+    {
+      "file": "bass_059_v1_rr2.wav",
+      "rootNote": 59,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b4_f_rr3.wav",
+      "sourceBlobSha": "0a75b1f2da0151d1d085c95fb92e511deca776b2",
+      "frames": 220500,
+      "sha256": "afa9a5231852984ffdf08ce4bf4799172a1debf04b9376e7c17f450ddcfbf6f6"
+    },
+    {
+      "file": "bass_059_v1_rr3.wav",
+      "rootNote": 59,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_b4_f_rr4.wav",
+      "sourceBlobSha": "540e1a0f8a837940e5fac1d201b2eb1ed542c394",
+      "frames": 220191,
+      "sha256": "2310cf1549f80bcbe3b4213858e52d1a928437c34c5fdb80651672583e177687"
+    },
+    {
+      "file": "bass_062_v0_rr0.wav",
+      "rootNote": 62,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d5_mp_rr1.wav",
+      "sourceBlobSha": "d3017b2940d3d7d068f523d43bcd0932a2bb8b15",
+      "frames": 220500,
+      "sha256": "3a9161aaf084492ff6510b11232de9ce8ac13b0a0446d555dcd3caa3bd45ef0e"
+    },
+    {
+      "file": "bass_062_v0_rr1.wav",
+      "rootNote": 62,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d5_mp_rr2.wav",
+      "sourceBlobSha": "9103efe93b6ee93f44a76cb7541de82e8eed99b6",
+      "frames": 220500,
+      "sha256": "a84a40ffe2254fbffa8a8f0a2a90a8003529e4fc66eba92790c1585c18210ac4"
+    },
+    {
+      "file": "bass_062_v0_rr2.wav",
+      "rootNote": 62,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d5_mp_rr3.wav",
+      "sourceBlobSha": "371ba6c6835e50e6964331c582757a63a42cb0dc",
+      "frames": 220418,
+      "sha256": "abf3590d90ff5a47935cac13f1b8142e9d3635ac4af81584beecc272ec18dd49"
+    },
+    {
+      "file": "bass_062_v0_rr3.wav",
+      "rootNote": 62,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d5_mp_rr4.wav",
+      "sourceBlobSha": "c291a016b69bb9f4b12ccab6e035f492f08b2bdd",
+      "frames": 220241,
+      "sha256": "75597edcd9d93ff59ed2c7ebb19e316ffb4d3bddaf64e8bd2e9b17e9c4339cd3"
+    },
+    {
+      "file": "bass_062_v1_rr0.wav",
+      "rootNote": 62,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d5_f_rr1.wav",
+      "sourceBlobSha": "cace8cf358f3cc85aff796e2329e2cdf4db7aaa5",
+      "frames": 220360,
+      "sha256": "3a22bf2bf09050b6f9a02a02bd4d2bc581575196c30a8008a8ea51e649f9aaa8"
+    },
+    {
+      "file": "bass_062_v1_rr1.wav",
+      "rootNote": 62,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d5_f_rr2.wav",
+      "sourceBlobSha": "e9011631823a2b618c4ff12ce42f97722169bba6",
+      "frames": 220500,
+      "sha256": "276a7ff2baa56397e06ccbc3850ee02a915ff4e98dfcc69bd4a25dcbac7946c1"
+    },
+    {
+      "file": "bass_062_v1_rr2.wav",
+      "rootNote": 62,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d5_f_rr3.wav",
+      "sourceBlobSha": "aefda1dbbb2079f4dbcc46af3908e86be1d40852",
+      "frames": 220345,
+      "sha256": "2246f20b13e6ca9e865ff6baa10430d8dbb9f1c5717a8c7a02f408a6785f3da3"
+    },
+    {
+      "file": "bass_062_v1_rr3.wav",
+      "rootNote": 62,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_d5_f_rr4.wav",
+      "sourceBlobSha": "7bfc098100ba9460c3fd383336583c3a61d4476a",
+      "frames": 220500,
+      "sha256": "45f220d93f3efa325f992b413a545776f0e0522e8e725d2145ec955f95f4bfe1"
+    },
+    {
+      "file": "bass_064_v0_rr0.wav",
+      "rootNote": 64,
+      "velocityLayer": 0,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_e5_mp_rr1.wav",
+      "sourceBlobSha": "07e812be82c1e9994c426240efed2b8fd4fcdc91",
+      "frames": 220500,
+      "sha256": "cb23e3dedcb4a741294eeda8b973c16a013fa2fc3df086ab07433d762c70418f"
+    },
+    {
+      "file": "bass_064_v0_rr1.wav",
+      "rootNote": 64,
+      "velocityLayer": 0,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_e5_mp_rr2.wav",
+      "sourceBlobSha": "d56c6c0896e1b939db9a1a04dc41d79c61ce318a",
+      "frames": 220500,
+      "sha256": "591b1b2f9761fa01a8e7cabf52dd6ef40343d9386e7848dc8370d997f5e36b5e"
+    },
+    {
+      "file": "bass_064_v0_rr2.wav",
+      "rootNote": 64,
+      "velocityLayer": 0,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_e5_mp_rr3.wav",
+      "sourceBlobSha": "35ae633350346cffa9496a39bc1aabdff629ef18",
+      "frames": 220500,
+      "sha256": "a3f89e193baf2448c0ffcd640894a35c0c0e87a58408e6e0f1ad41d1aa029e68"
+    },
+    {
+      "file": "bass_064_v0_rr3.wav",
+      "rootNote": 64,
+      "velocityLayer": 0,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_e5_mp_rr4.wav",
+      "sourceBlobSha": "7ab13aec6ffc0d2b695fd07d2a32843ae054695c",
+      "frames": 220500,
+      "sha256": "3cd3abde286fd34ca1935974df11d6b708032a5854ccd9856dc79d39194917e4"
+    },
+    {
+      "file": "bass_064_v1_rr0.wav",
+      "rootNote": 64,
+      "velocityLayer": 1,
+      "roundRobin": 0,
+      "sourcePath": "Samples/darkblack/reg/darkblack_e5_f_rr1.wav",
+      "sourceBlobSha": "75836e121854ba71a2e7ed355043bc43dddc66a6",
+      "frames": 220500,
+      "sha256": "3558ce95000ca31a5754494cd15fc6b7d94a032eabc101f013259a539aa8eaa7"
+    },
+    {
+      "file": "bass_064_v1_rr1.wav",
+      "rootNote": 64,
+      "velocityLayer": 1,
+      "roundRobin": 1,
+      "sourcePath": "Samples/darkblack/reg/darkblack_e5_f_rr2.wav",
+      "sourceBlobSha": "2bebfce6e9b0a89c2e81218b02a7452f38b5a86d",
+      "frames": 220008,
+      "sha256": "5331fb9a013e9a3041d41093d982e6394dbe54d05930a9f7ee4a2c532da8b05e"
+    },
+    {
+      "file": "bass_064_v1_rr2.wav",
+      "rootNote": 64,
+      "velocityLayer": 1,
+      "roundRobin": 2,
+      "sourcePath": "Samples/darkblack/reg/darkblack_e5_f_rr3.wav",
+      "sourceBlobSha": "b9c4b7033495dc615cad6c2d0982c674ea71ed2a",
+      "frames": 220500,
+      "sha256": "356ccf0a7011850d48ca08b21a19e593833cb66094d62952518002bd8839d31f"
+    },
+    {
+      "file": "bass_064_v1_rr3.wav",
+      "rootNote": 64,
+      "velocityLayer": 1,
+      "roundRobin": 3,
+      "sourcePath": "Samples/darkblack/reg/darkblack_e5_f_rr4.wav",
+      "sourceBlobSha": "50c346db531d7647e569e714e98bb4dc0e2a0a7f",
+      "frames": 220500,
+      "sha256": "8e0c563299b2c68d3b00b472c76a0affd2e4874d1fdfd3b3b8c3182e614a27a8"
+    }
+  ]
+}
