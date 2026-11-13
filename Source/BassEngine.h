@@ -21,8 +21,9 @@ struct Sample {
 
 // A monophonic, sample-backed bass with one timbre macro. The sample bank is
 // installed before playback; all rendering and MIDI methods are allocation-free.
-// Morph: 0 = soft natural bass, 0.25 = warmer/open natural bass, 0.5 = driven
-// bass, 0.75 = controlled dance synth bass, 1 = full 808 sub with a short click.
+// Morph control: 0 = soft natural, 0.25 = open natural, 0.40 = driven bass,
+// 0.65 = dance synth, 1 = 808. Timbres retain their original internal positions;
+// setMorph maps the control before the existing parameter smoothing.
 class BassEngine {
 public:
     BassEngine() { prepare(44100.0); }
@@ -159,7 +160,18 @@ public:
     }
 
     void setMorph(float value) {
-        if (std::isfinite(value)) morphTarget_ = std::clamp(value, 0.0f, 1.0f);
+        if (!std::isfinite(value)) return;
+        const float knob = std::clamp(value, 0.0f, 1.0f);
+        // The first quarter keeps its approved natural response. The driven
+        // anchor is reached earlier and hands over fully to dance by 65%.
+        if (knob <= 0.25f) morphTarget_ = knob;
+        else if (knob < 0.40f)
+            morphTarget_ = 0.25f + (knob - 0.25f) * (0.25f / (0.40f - 0.25f));
+        else if (knob < 0.65f)
+            morphTarget_ = 0.50f + (knob - 0.40f) * (0.25f / (0.65f - 0.40f));
+        else if (knob < 1.0f)
+            morphTarget_ = 0.75f + (knob - 0.65f) * (0.25f / (1.0f - 0.65f));
+        else morphTarget_ = 1.0f;
     }
 
     // Linear output gain, not decibels. Unity is the calibrated nominal level.
@@ -280,13 +292,14 @@ public:
             const float driveAmount = smoothstep((morphCurrent_ - 0.30f) / 0.20f);
             // Soften only the driven-bass anchor: at 0.5 the shaper input gain
             // is 9.28x rather than 24x, while the signal stays fully in that path.
-            // Recover the approved saturation smoothly by 0.72, before the
-            // dance anchor's shared 8% sample contribution is reached at 0.75.
+            // Recover the approved saturation smoothly by internal position 0.72;
+            // the sampled path has completely faded out at internal 0.75.
             float saturationAmount = driveAmount;
+            float drivenFocus = 0.0f;
             if (morphCurrent_ > 0.30f && morphCurrent_ < 0.72f) {
-                const float localReduction = morphCurrent_ <= 0.50f ? driveAmount
+                drivenFocus = morphCurrent_ <= 0.50f ? driveAmount
                     : 1.0f - smoothstep((morphCurrent_ - 0.50f) / 0.22f);
-                saturationAmount *= 1.0f - 0.40f * localReduction;
+                saturationAmount *= 1.0f - 0.40f * drivenFocus;
             }
             const float preGain = 1.0f + 23.0f * saturationAmount * saturationAmount;
             const float driven = recorded * preGain;
@@ -299,19 +312,23 @@ public:
             // Match the shaper's new drive to the existing real-bank energy
             // calibration. This preserves body/level without changing the master.
             const float compensation = interpolate(compensation_, saturationAmount);
+            // A separate post-shaper balance keeps the approved distortion
+            // spectrum and envelope, but seats its anchor 3 dB lower. The trim
+            // fades continuously through neighbouring control positions.
+            const float drivenLevel = 1.0f + (0.70794578f - 1.0f) * drivenFocus;
             const float acoustic = (1.0f - driveAmount) * dry
-                + driveAmount * shaped * compensation;
+                + driveAmount * shaped * compensation * drivenLevel;
             previousSample_ = recorded;
             previousDriven_ = driven;
 
             const float electronic = renderSynth(bendRatio);
             const float synthTransition = smoothstep((morphCurrent_ - 0.50f) * 4.0f);
             const float subTransition = smoothstep((morphCurrent_ - 0.75f) * 4.0f);
-            const float blend = synthTransition * (0.92f + 0.08f * subTransition);
-            // Keep a small connection to the approved driven bass at the dance
-            // anchor; its remaining 8% disappears toward the dedicated 808.
-            // Complementary gains avoid stacking two full-level fundamentals.
-            float output = ((1.0f - blend) * acoustic + blend * electronic)
+            const float electronicWeight = synthTransition * (0.92f + 0.08f * subTransition);
+            // The sampled/drive path now ends at the dance anchor (65% on the
+            // control), rather than retaining an 8% residue until the 808 end.
+            // Keep the electronic contribution at its approved calibrated gain.
+            float output = ((1.0f - synthTransition) * acoustic + electronicWeight * electronic)
                 * nominalHeadroom_ * gainCurrent_;
             if (!std::isfinite(output)) output = 0.0f;
             if (left != nullptr) left[i] = output;
