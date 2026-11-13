@@ -43,7 +43,7 @@ if [[ ! -d "$sculpt_bundle" || ! -f "$sculpt_binary" ]]; then
   exit 1
 fi
 
-lipo -verify_arch arm64 x86_64 "$sculpt_binary"
+lipo "$sculpt_binary" -verify_arch arm64 x86_64
 plutil -lint "${sculpt_bundle}/Contents/Info.plist"
 codesign --force --deep --sign - "$sculpt_bundle"
 codesign --verify --deep --strict --verbose=2 "$sculpt_bundle"
