@@ -93,7 +93,7 @@ int main(int argc, char** argv) {
             }
         };
         const std::array<int, 16> notes {35, 35, 38, 40, 35, 42, 40, 38, 35, 35, 47, 45, 42, 40, 38, 35};
-        for (const float morph : {0.0f, 0.25f, 0.5f, 0.75f, 1.0f}) {
+        for (const float morph : {0.0f, 0.25f, 0.40f, 0.65f, 1.0f}) {
             engine.reset(); engine.setMorph(morph); engine.setOutputGain(0.8f);
             render(static_cast<int>(rate / 10), false);
             const auto start = output.size();
