@@ -165,8 +165,8 @@ void testAnchorsAndTuning() {
         / spectralAmplitude(anchors[3], frequency(40), 6000);
     require(synthSecond > 0.20 && synthNinth > 0.04,
         "The dance synth needs a saturated spectrum extending beyond the former eight partials");
-    require(harmonic[4] > 0.40 && harmonic[4] < 0.55,
-        "The 808 needs controlled aggression while retaining a dominant fundamental");
+    require(harmonic[4] > 0.10 && harmonic[4] < 0.20,
+        "The 808 must retain subtle harmonics beneath a dominant fundamental");
     require(std::abs(measuredFrequency(anchors[4], 6000) - frequency(40)) < 0.10,
         "808 fundamental is not MIDI-tuned after its short attack envelope");
     require(rms(anchors[4], 6000) > rms(anchors[2], 6000),

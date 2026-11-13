@@ -1,0 +1,42 @@
+SCULPT BASS 0.1.2 E SCULPT KEY 0.1.1 — AGGIORNAMENTO TIMBRICO
+
+CONTENUTO
+SculptBass-0.1.2-sorgenti.zip: progetto completo con Distorto più moderato.
+SculptKey-0.1.1-sorgenti.zip: progetto completo con Rhodes jazz e Hammond rock.
+I file WAV sono anteprime dei motori reali con i campioni dei progetti.
+Gli ZIP sono sorgenti da compilare; non contengono VST3 macOS già compilati.
+
+AGGIORNAMENTO RAPIDO DEI REPOSITORY GIÀ ESISTENTI
+Le correzioni audio sono nei due file del motore, disponibili anche separati:
+- Nel repository di Sculpt Bass: sostituire Source/BassEngine.h.
+- Nel repository di Sculpt Key: sostituire Source/KeyEngine.h.
+
+Aprire la cartella Source nel rispettivo repository GitHub, scegliere
+Add file → Upload files e caricare il file corrispondente. Il nome deve
+restare BassEngine.h o KeyEngine.h. Confermare Commit changes sul branch main.
+Il workflow Build macOS VST3 parte automaticamente con il commit.
+Non caricare entrambi i motori nello stesso repository.
+
+Per avviare la compilazione manualmente:
+Actions → Build macOS VST3 → Run workflow sul branch main.
+Al termine, scaricare l'artefatto Sculpt-Bass-macOS-VST3 oppure
+Sculpt-Key-macOS-VST3 e aprire lo ZIP fino a trovare il relativo bundle .vst3.
+
+Sostituire il solo header aggiorna il suono, ma lascia invariato il numero
+di versione dichiarato dal progetto esistente. I pacchetti completi
+includono anche CMake e documentazione aggiornati a Bass 0.1.2 e Key 0.1.1.
+
+SE KEY NON HA ANCORA UN REPOSITORY
+Usare il progetto completo. Caricare il contenuto di SculptKey nella radice
+del repository, includendo .github/workflows/build-macos-vst3.yml.
+Le istruzioni dettagliate sono nel README.md del progetto.
+
+INSTALLAZIONE
+Chiudere la DAW e sostituire il bundle precedente nella stessa cartella VST3.
+Per l'installazione personale macOS:
+~/Library/Audio/Plug-Ins/VST3/
+Riaprire la DAW e, se richiesto, aggiornare la scansione dei plugin.
+
+PUNTI DI ASCOLTO
+Bass: il Distorto aggiornato è circa tra 0:12 e 0:18.
+Key: Rhodes tra 0:08 e 0:16; Hammond tra 0:16 e 0:24.

@@ -1,8 +1,8 @@
 # Sculpt Bass
 
-Prototipo di strumento VST3 per macOS, versione **0.1.0 — revisione timbrica 4**. Una sola manopola trasforma un **basso naturale rotondo** in un **naturale appena più aperto**, poi in **distorto**, **synth dance** e infine **808 aggressivo**.
+Prototipo di strumento VST3 per macOS, versione **0.1.2 — revisione timbrica 6**. Una sola manopola trasforma un **basso naturale rotondo** in un **naturale appena più aperto**, poi in **distorto**, **synth dance** e infine **808**.
 
-La revisione 4 rende Dance e 808 più percussivi nell'attacco e più ricchi di armoniche anche nel corpo della nota. I due timbri naturali e il distorto conservano il carattere della revisione 3.
+La revisione 6 riduce la saturazione del basso Distorto al 50%: conserva un crunch riconoscibile, con più articolazione e una compensazione del livello basata sulla banca reale. Naturali, Synth dance e 808 conservano i rispettivi suoni della revisione 5.
 
 ## Uso
 
@@ -14,9 +14,9 @@ Carica il plugin su una traccia MIDI e suona. Le cinque posizioni di riferimento
 | --- | --- |
 | **0%** | **Naturale rotondo:** ripresa fingerstyle mp, realmente suonata più piano, con un trattamento leggero. |
 | **25%** | **Naturale più aperto:** la ripresa mp rimane prevalente, con un poco più di presenza e incisività. |
-| **50%** | **Distorto:** conserva il carattere approvato della revisione precedente. |
-| **75%** | **Synth dance:** attacco più percussivo e armoniche più forti ed estese anche nel corpo, con la quota di basso distorto registrato conservata. |
-| **100%** | **808 aggressivo:** attacco più marcato, fondamentale corposa e un corpo più ricco di armoniche, con il gain generale mantenuto. |
+| **50%** | **Distorto:** crunch più moderato, con minore compressione della forma d'onda e corpo presente. |
+| **75%** | **Synth dance:** corpo sintetico presente, alte più controllate e una quota ridotta del basso distorto registrato. |
+| **100%** | **808:** fondamentale corposa, armoniche moderate e click breve; l'attacco sui bassi resta pieno. |
 
 Il passaggio è continuo: si possono usare tutte le sfumature fra queste posizioni. Le tre etichette **Naturale / Distorto / 808** mantengono i riferimenti principali dell'interfaccia; il tooltip di Morph descrive tutte e cinque le tappe.
 
@@ -40,17 +40,21 @@ bash tools/build-macos.sh
 
 Lo script compila il target `SculptBass_VST3` per Apple Silicon e Intel e prepara `dist/Sculpt-Bass-macOS-VST3.zip`. Il bundle ha una firma locale ad hoc; non è notarizzato. Per installarlo, copia `Sculpt Bass.vst3` in `~/Library/Audio/Plug-Ins/VST3/` e fai rileggere i plugin alla DAW.
 
+Su GitHub, il workflow **Build macOS VST3** usa il runner `macos-15` e parte automaticamente con un commit su `main`; si può avviare anche da **Actions → Build macOS VST3 → Run workflow**. L'artefatto finale si chiama **Sculpt-Bass-macOS-VST3**. Lo script include l'ordine corretto degli argomenti del controllo universale: `lipo "$sculpt_binary" -verify_arch arm64 x86_64`.
+
 ## Stato
 
 I controlli del progetto riguardano selezione campioni, round robin, morph, intonazione, ciclo delle note e assenza di allocazioni nel render, oltre alla sintassi del wrapper con gli header JUCE 8.0.4. Gli esiti aggiornati e i limiti della verifica sono in `docs/VERIFICA.txt`.
 
-**La compilazione macOS e la verifica del VST3 in una DAW non sono ancora state eseguite. Questo è il pacchetto sorgenti, non un plugin già compilato.**
+Il confronto con la revisione 5 verifica separatamente i suoni approvati allo 0%, 25%, 75% e 100% e la riduzione della saturazione al 50%. Le misure e i risultati del motore sono raccolti in `docs/VERIFICA.txt`.
 
-## Ascolto della revisione timbrica 4
+**La revisione 6 (0.1.2) deve ancora essere compilata e verificata come VST3 su macOS. Questo pacchetto contiene i sorgenti aggiornati e gli script di build corretti.**
+
+## Ascolto della revisione timbrica 6
 
 `Preview/SculptBass-demo.wav` presenta lo stesso riff nelle cinque posizioni **0%, 25%, 50%, 75% e 100%**. Segue una nota tenuta mentre la macro attraversa il percorso in entrambe le direzioni, poi il rilascio. L'anteprima dura circa 35 secondi. È un rendering del motore reale con i campioni inclusi; i tempi indicativi sono in `Preview/ASCOLTO.txt`.
 
-Note, velocity, tempistiche e gain del demo sono quelli della revisione 3, per confrontare direttamente i cambiamenti timbrici.
+Note, velocity, tempistiche e gain del demo sono quelli della revisione 5, per confrontare direttamente il cambiamento. Il Distorto si ascolta circa da 0:12 a 0:18; la riduzione della saturazione è raccordata gradualmente ai timbri vicini.
 
 ## Campioni
 

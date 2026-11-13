@@ -1,0 +1,2 @@
+Sculpt Bass 0.1.2 — revisione timbrica 6
+BassEngine.h SHA256: 6eeb3964e01ef82d595ce3ece28fadfb5e1fc9da6f29e38c62aadceff3ad0939

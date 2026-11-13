@@ -1,0 +1,319 @@
+{
+  "source_rate": 44100,
+  "gain": 0.8,
+  "frames": 1544125,
+  "normalisation": false,
+  "before_header_sha256": "97873d7aab24b10396584a120e93a150e82de148a18b5f3f05c2ca4f94ec37c5",
+  "after_header_sha256": "8fba7916b29be1d3568a86f386116f56789899258f55d3d1c8d20f9204df5650",
+  "anchors": [
+    {
+      "morph": 0.0,
+      "identical_float_bits_including_release": true,
+      "changed_samples_including_release": 0,
+      "maximum_absolute_difference": 0.0,
+      "before": {
+        "phrase_rms_dbfs": -25.941093947698015,
+        "peak": 0.14139994978904724,
+        "peak_dbfs": -16.991014895130846,
+        "attack_0_30ms_rms_dbfs": -30.90268591779287,
+        "body_80_260ms_rms_dbfs": -25.289268276210226,
+        "attack_body_db": -5.613417641582641,
+        "body_bands_dbfs": {
+          "25-160Hz": -27.425347272351782,
+          "160-600Hz": -29.431547575945718,
+          "600-2000Hz": -50.367382345614516,
+          "2000-10000Hz": -89.97457783001664,
+          "10000-22050Hz": -120.76440733989214
+        },
+        "body_h3_h1_db": -3.1076209672605697,
+        "body_h9_h1_db": -27.594745694472973,
+        "maximum_sample_step": 0.009496109560132027
+      },
+      "after": {
+        "phrase_rms_dbfs": -25.941093947698015,
+        "peak": 0.14139994978904724,
+        "peak_dbfs": -16.991014895130846,
+        "attack_0_30ms_rms_dbfs": -30.90268591779287,
+        "body_80_260ms_rms_dbfs": -25.289268276210226,
+        "attack_body_db": -5.613417641582641,
+        "body_bands_dbfs": {
+          "25-160Hz": -27.425347272351782,
+          "160-600Hz": -29.431547575945718,
+          "600-2000Hz": -50.367382345614516,
+          "2000-10000Hz": -89.97457783001664,
+          "10000-22050Hz": -120.76440733989214
+        },
+        "body_h3_h1_db": -3.1076209672605697,
+        "body_h9_h1_db": -27.594745694472973,
+        "maximum_sample_step": 0.009496109560132027
+      },
+      "delta_db": {
+        "phrase_rms_dbfs": 0.0,
+        "peak_dbfs": 0.0,
+        "attack_0_30ms_rms_dbfs": 0.0,
+        "body_80_260ms_rms_dbfs": 0.0,
+        "attack_body_db": 0.0,
+        "body_h3_h1_db": 0.0,
+        "body_h9_h1_db": 0.0
+      },
+      "band_delta_db": {
+        "25-160Hz": 0.0,
+        "160-600Hz": 0.0,
+        "600-2000Hz": 0.0,
+        "2000-10000Hz": 0.0,
+        "10000-22050Hz": 0.0
+      }
+    },
+    {
+      "morph": 0.25,
+      "identical_float_bits_including_release": true,
+      "changed_samples_including_release": 0,
+      "maximum_absolute_difference": 0.0,
+      "before": {
+        "phrase_rms_dbfs": -26.61929656589601,
+        "peak": 0.14965669810771942,
+        "peak_dbfs": -16.498076817889288,
+        "attack_0_30ms_rms_dbfs": -30.8091402198187,
+        "body_80_260ms_rms_dbfs": -26.000864501628076,
+        "attack_body_db": -4.808275718190627,
+        "body_bands_dbfs": {
+          "25-160Hz": -28.229016213176816,
+          "160-600Hz": -30.005097790469204,
+          "600-2000Hz": -49.035179999227225,
+          "2000-10000Hz": -77.79985101138583,
+          "10000-22050Hz": -116.23267967861887
+        },
+        "body_h3_h1_db": -3.1675562855737893,
+        "body_h9_h1_db": -27.5043282968825,
+        "maximum_sample_step": 0.009659175295382738
+      },
+      "after": {
+        "phrase_rms_dbfs": -26.61929656589601,
+        "peak": 0.14965669810771942,
+        "peak_dbfs": -16.498076817889288,
+        "attack_0_30ms_rms_dbfs": -30.8091402198187,
+        "body_80_260ms_rms_dbfs": -26.000864501628076,
+        "attack_body_db": -4.808275718190627,
+        "body_bands_dbfs": {
+          "25-160Hz": -28.229016213176816,
+          "160-600Hz": -30.005097790469204,
+          "600-2000Hz": -49.035179999227225,
+          "2000-10000Hz": -77.79985101138583,
+          "10000-22050Hz": -116.23267967861887
+        },
+        "body_h3_h1_db": -3.1675562855737893,
+        "body_h9_h1_db": -27.5043282968825,
+        "maximum_sample_step": 0.009659175295382738
+      },
+      "delta_db": {
+        "phrase_rms_dbfs": 0.0,
+        "peak_dbfs": 0.0,
+        "attack_0_30ms_rms_dbfs": 0.0,
+        "body_80_260ms_rms_dbfs": 0.0,
+        "attack_body_db": 0.0,
+        "body_h3_h1_db": 0.0,
+        "body_h9_h1_db": 0.0
+      },
+      "band_delta_db": {
+        "25-160Hz": 0.0,
+        "160-600Hz": 0.0,
+        "600-2000Hz": 0.0,
+        "2000-10000Hz": 0.0,
+        "10000-22050Hz": 0.0
+      }
+    },
+    {
+      "morph": 0.5,
+      "identical_float_bits_including_release": true,
+      "changed_samples_including_release": 0,
+      "maximum_absolute_difference": 0.0,
+      "before": {
+        "phrase_rms_dbfs": -24.565795312977798,
+        "peak": 0.09082837402820587,
+        "peak_dbfs": -20.835569206026143,
+        "attack_0_30ms_rms_dbfs": -28.11999463133637,
+        "body_80_260ms_rms_dbfs": -24.37638454590224,
+        "attack_body_db": -3.743610085434131,
+        "body_bands_dbfs": {
+          "25-160Hz": -31.70054022922269,
+          "160-600Hz": -27.189628288996456,
+          "600-2000Hz": -30.09359332851744,
+          "2000-10000Hz": -43.527590796206546,
+          "10000-22050Hz": -76.10531303490787
+        },
+        "body_h3_h1_db": 2.8685672192693374,
+        "body_h9_h1_db": -12.63587890675075,
+        "maximum_sample_step": 0.07837005890905857
+      },
+      "after": {
+        "phrase_rms_dbfs": -24.565795312977798,
+        "peak": 0.09082837402820587,
+        "peak_dbfs": -20.835569206026143,
+        "attack_0_30ms_rms_dbfs": -28.11999463133637,
+        "body_80_260ms_rms_dbfs": -24.37638454590224,
+        "attack_body_db": -3.743610085434131,
+        "body_bands_dbfs": {
+          "25-160Hz": -31.70054022922269,
+          "160-600Hz": -27.189628288996456,
+          "600-2000Hz": -30.09359332851744,
+          "2000-10000Hz": -43.527590796206546,
+          "10000-22050Hz": -76.10531303490787
+        },
+        "body_h3_h1_db": 2.8685672192693374,
+        "body_h9_h1_db": -12.63587890675075,
+        "maximum_sample_step": 0.07837005890905857
+      },
+      "delta_db": {
+        "phrase_rms_dbfs": 0.0,
+        "peak_dbfs": 0.0,
+        "attack_0_30ms_rms_dbfs": 0.0,
+        "body_80_260ms_rms_dbfs": 0.0,
+        "attack_body_db": 0.0,
+        "body_h3_h1_db": 0.0,
+        "body_h9_h1_db": 0.0
+      },
+      "band_delta_db": {
+        "25-160Hz": 0.0,
+        "160-600Hz": 0.0,
+        "600-2000Hz": 0.0,
+        "2000-10000Hz": 0.0,
+        "10000-22050Hz": 0.0
+      }
+    },
+    {
+      "morph": 0.75,
+      "identical_float_bits_including_release": false,
+      "changed_samples_including_release": 247258,
+      "maximum_absolute_difference": 0.2210361286997795,
+      "before": {
+        "phrase_rms_dbfs": -21.939510742629157,
+        "peak": 0.3134930729866028,
+        "peak_dbfs": -10.075441019914479,
+        "attack_0_30ms_rms_dbfs": -18.178586923863378,
+        "body_80_260ms_rms_dbfs": -21.984821516304184,
+        "attack_body_db": 3.8062345924408056,
+        "body_bands_dbfs": {
+          "25-160Hz": -24.12402178367448,
+          "160-600Hz": -28.48772446819364,
+          "600-2000Hz": -30.863874642824666,
+          "2000-10000Hz": -36.65978966286256,
+          "10000-22050Hz": -90.99986632005881
+        },
+        "body_h3_h1_db": -8.275795502146913,
+        "body_h9_h1_db": -13.608700693470446,
+        "maximum_sample_step": 0.19454993307590485
+      },
+      "after": {
+        "phrase_rms_dbfs": -21.737641266288637,
+        "peak": 0.30743905901908875,
+        "peak_dbfs": -10.244819155797568,
+        "attack_0_30ms_rms_dbfs": -17.766036060077276,
+        "body_80_260ms_rms_dbfs": -21.831395462403798,
+        "attack_body_db": 4.065359402326521,
+        "body_bands_dbfs": {
+          "25-160Hz": -22.65643320264016,
+          "160-600Hz": -30.23445513172812,
+          "600-2000Hz": -37.57474903526055,
+          "2000-10000Hz": -52.82823560874234,
+          "10000-22050Hz": -98.04349035252113
+        },
+        "body_h3_h1_db": -11.279041777125727,
+        "body_h9_h1_db": -20.725359572572792,
+        "maximum_sample_step": 0.05299357883632183
+      },
+      "delta_db": {
+        "phrase_rms_dbfs": 0.20186947634051933,
+        "peak_dbfs": -0.1693781358830897,
+        "attack_0_30ms_rms_dbfs": 0.41255086378610173,
+        "body_80_260ms_rms_dbfs": 0.153426053900386,
+        "attack_body_db": 0.25912480988571573,
+        "body_h3_h1_db": -3.003246274978814,
+        "body_h9_h1_db": -7.116658879102346
+      },
+      "band_delta_db": {
+        "25-160Hz": 1.4675885810343203,
+        "160-600Hz": -1.7467306635344784,
+        "600-2000Hz": -6.710874392435887,
+        "2000-10000Hz": -16.168445945879782,
+        "10000-22050Hz": -7.0436240324623185
+      }
+    },
+    {
+      "morph": 1.0,
+      "identical_float_bits_including_release": false,
+      "changed_samples_including_release": 247258,
+      "maximum_absolute_difference": 0.2899588495492935,
+      "before": {
+        "phrase_rms_dbfs": -18.591827724797135,
+        "peak": 0.481055349111557,
+        "peak_dbfs": -6.356099036730978,
+        "attack_0_30ms_rms_dbfs": -14.567992558481084,
+        "body_80_260ms_rms_dbfs": -18.70188139429583,
+        "attack_body_db": 4.133888835814748,
+        "body_bands_dbfs": {
+          "25-160Hz": -20.49998494211676,
+          "160-600Hz": -25.371112731081208,
+          "600-2000Hz": -30.982199535900115,
+          "2000-10000Hz": -30.61005466886593,
+          "10000-22050Hz": -157.27305873039862
+        },
+        "body_h3_h1_db": -6.375294473856691,
+        "body_h9_h1_db": -19.17240864053524,
+        "maximum_sample_step": 0.2770173102617264
+      },
+      "after": {
+        "phrase_rms_dbfs": -18.529277103970365,
+        "peak": 0.4468820095062256,
+        "peak_dbfs": -6.996142574702482,
+        "attack_0_30ms_rms_dbfs": -14.335358103223047,
+        "body_80_260ms_rms_dbfs": -18.696307781408624,
+        "attack_body_db": 4.360949678185578,
+        "body_bands_dbfs": {
+          "25-160Hz": -18.81034345122743,
+          "160-600Hz": -34.82773839655488,
+          "600-2000Hz": -56.640259676722415,
+          "2000-10000Hz": -161.7229246208204,
+          "10000-22050Hz": -161.428711848564
+        },
+        "body_h3_h1_db": -17.136936450367653,
+        "body_h9_h1_db": -46.18314712180157,
+        "maximum_sample_step": 0.04108455777168274
+      },
+      "delta_db": {
+        "phrase_rms_dbfs": 0.06255062082676943,
+        "peak_dbfs": -0.6400435379715042,
+        "attack_0_30ms_rms_dbfs": 0.2326344552580366,
+        "body_80_260ms_rms_dbfs": 0.005573612887207702,
+        "attack_body_db": 0.2270608423708298,
+        "body_h3_h1_db": -10.761641976510962,
+        "body_h9_h1_db": -27.010738481266326
+      },
+      "band_delta_db": {
+        "25-160Hz": 1.6896414908893327,
+        "160-600Hz": -9.45662566547367,
+        "600-2000Hz": -25.6580601408223,
+        "2000-10000Hz": -131.11286995195448,
+        "10000-22050Hz": -4.1556531181653895
+      }
+    }
+  ],
+  "global_after_peak": 0.4468820095062256,
+  "global_before_peak": 0.481055349111557,
+  "tests": {
+    "original_suite_on_rev4": "PASS",
+    "original_suite_on_rev5_failed_assertions": [
+      "808 H3/H1 lower bound 0.40"
+    ],
+    "new_808_h3_h1": 0.139043,
+    "new_synth_h2_h1": 0.223873,
+    "new_synth_h9_h1": 0.091233,
+    "updated_808_range": [
+      0.1,
+      0.2
+    ],
+    "updated_suite_on_rev4": "EXPECTED FAIL: 808 harmonic ratio",
+    "updated_suite_on_rev5": "PASS",
+    "compiler_flags": "-std=c++17 -O2 -Wall -Wextra -Wpedantic -Werror",
+    "macos_plugin_build_performed": false
+  }
+}

@@ -22,7 +22,7 @@ struct Sample {
 // A monophonic, sample-backed bass with one timbre macro. The sample bank is
 // installed before playback; all rendering and MIDI methods are allocation-free.
 // Morph: 0 = soft natural bass, 0.25 = warmer/open natural bass, 0.5 = driven
-// bass, 0.75 = distorted dance synth bass, 1 = harmonically aggressive 808 bass.
+// bass, 0.75 = controlled dance synth bass, 1 = full 808 sub with a short click.
 class BassEngine {
 public:
     BassEngine() { prepare(44100.0); }
@@ -92,12 +92,22 @@ public:
             toneFilterSteps_[i] = 1.0f
                 - static_cast<float>(std::exp(-2.0 * pi_ * cutoff / sampleRate_));
         }
+        double danceReferencePower = 0.0, danceOvertonePower = 0.0;
         for (std::size_t i = 0; i < danceHarmonics_.size(); ++i) {
             const double harmonic = static_cast<double>(i + 1);
-            danceHarmonics_[i] = i == 0 ? 1.0f : static_cast<float>(
-                0.65 * std::pow(harmonic, -0.85)
-                + ((i % 2) == 0 ? 0.35 * std::pow(harmonic, -0.75) : 0.0));
-            if (harmonic > 8.0) danceHarmonics_[i] *= 1.35f;
+            const double base = i == 0 ? 1.0
+                : 0.65 * std::pow(harmonic, -0.85)
+                    + ((i % 2) == 0 ? 0.35 * std::pow(harmonic, -0.75) : 0.0);
+            const double previous = base * (harmonic > 8.0 ? 1.35 : 1.0);
+            const double heldColour = 1.0 - 0.45 * static_cast<double>(i)
+                / static_cast<double>(danceHarmonics_.size() - 1);
+            danceReferencePower += previous * previous * heldColour * heldColour;
+            // Retain the useful saw/pulse identity, but make the upper spectrum
+            // recede smoothly instead of keeping a boosted, nearly flat rasp.
+            const double controlled = i == 0 ? 1.0 : base * 0.82
+                * std::exp(-std::max(0.0, harmonic - 6.0) / 18.0);
+            danceHarmonics_[i] = static_cast<float>(controlled);
+            if (i != 0) danceOvertonePower += controlled * controlled * heldColour * heldColour;
 
             // A deterministic, low-crest harmonic packet adds a short midrange
             // strike. It shares the oscillator clock, excludes the fundamental,
@@ -109,20 +119,32 @@ public:
             punchSine_[i] = static_cast<float>(packetLevel * std::cos(packetPhase));
             punchCosine_[i] = static_cast<float>(packetLevel * std::sin(packetPhase));
         }
-        subHarmonics_.fill(0.0f);
-        subHarmonics_[0] = 1.00f;
-        subHarmonics_[1] = 0.18f;
-        subHarmonics_[2] = 0.48f;
-        subHarmonics_[4] = 0.26f;
-        subHarmonics_[6] = 0.16f;
-        subHarmonics_[8] = 0.11f;
-        subHarmonics_[10] = 0.07f;
-        subHarmonics_[12] = 0.04f;
-        subHarmonics_[14] = 0.025f;
+        // Put the removed sustained energy into the fundamental, preserving
+        // body/RMS instead of achieving a cleaner sound by turning it down.
+        danceHarmonics_[0] = static_cast<float>(std::sqrt(
+            std::max(1.0, danceReferencePower - danceOvertonePower)));
+
+        // The old 808's broad odd-harmonic tail is used only as an energy
+        // reference. The audible replacement contains the first few overtones.
+        static constexpr std::array<double, 15> previousSub{
+            1.0, 0.18, 0.48, 0.0, 0.26, 0.0, 0.16, 0.0,
+            0.11, 0.0, 0.07, 0.0, 0.04, 0.0, 0.025};
+        double subReferencePower = 0.0;
+        for (double amplitude : previousSub) subReferencePower += amplitude * amplitude;
         for (std::size_t i = 16; i < subHarmonics_.size(); i += 2) {
-            const double harmonic = static_cast<double>(i + 1);
-            subHarmonics_[i] = static_cast<float>(0.13 * std::pow(17.0 / harmonic, 0.65));
+            const double previous = 0.13 * std::pow(17.0 / static_cast<double>(i + 1), 0.65);
+            subReferencePower += previous * previous;
         }
+        subHarmonics_.fill(0.0f);
+        subHarmonics_[1] = 0.12f;
+        subHarmonics_[2] = 0.17f;
+        subHarmonics_[4] = 0.050f;
+        subHarmonics_[6] = 0.018f;
+        subHarmonics_[8] = 0.006f;
+        double subOvertonePower = 0.0;
+        for (float amplitude : subHarmonics_) subOvertonePower += static_cast<double>(amplitude) * amplitude;
+        subHarmonics_[0] = static_cast<float>(std::sqrt(
+            std::max(1.0, subReferencePower - subOvertonePower)));
         reset();
     }
 
@@ -256,7 +278,17 @@ public:
 
             // Distortion begins only after the separate clean-aggressive stage.
             const float driveAmount = smoothstep((morphCurrent_ - 0.30f) / 0.20f);
-            const float preGain = 1.0f + 23.0f * driveAmount * driveAmount;
+            // Soften only the driven-bass anchor: at 0.5 the shaper input gain
+            // is 9.28x rather than 24x, while the signal stays fully in that path.
+            // Recover the approved saturation smoothly by 0.72, before the
+            // dance anchor's shared 8% sample contribution is reached at 0.75.
+            float saturationAmount = driveAmount;
+            if (morphCurrent_ > 0.30f && morphCurrent_ < 0.72f) {
+                const float localReduction = morphCurrent_ <= 0.50f ? driveAmount
+                    : 1.0f - smoothstep((morphCurrent_ - 0.50f) / 0.22f);
+                saturationAmount *= 1.0f - 0.40f * localReduction;
+            }
+            const float preGain = 1.0f + 23.0f * saturationAmount * saturationAmount;
             const float driven = recorded * preGain;
             // First-order antiderivative antialiasing of x/sqrt(1+x*x).
             // Rationalising the primitive difference avoids cancellation near x[n-1].
@@ -264,7 +296,9 @@ public:
                 / (std::sqrt(1.0f + driven * driven)
                    + std::sqrt(1.0f + previousDriven_ * previousDriven_));
             const float dry = 0.5f * (recorded + previousSample_);
-            const float compensation = interpolate(compensation_, driveAmount);
+            // Match the shaper's new drive to the existing real-bank energy
+            // calibration. This preserves body/level without changing the master.
+            const float compensation = interpolate(compensation_, saturationAmount);
             const float acoustic = (1.0f - driveAmount) * dry
                 + driveAmount * shaped * compensation;
             previousSample_ = recorded;
@@ -273,9 +307,9 @@ public:
             const float electronic = renderSynth(bendRatio);
             const float synthTransition = smoothstep((morphCurrent_ - 0.50f) * 4.0f);
             const float subTransition = smoothstep((morphCurrent_ - 0.75f) * 4.0f);
-            const float blend = synthTransition * (0.82f + 0.18f * subTransition);
-            // Keep some of the approved driven bass inside the dance anchor.
-            // Its final 18% disappears continuously toward the dedicated 808.
+            const float blend = synthTransition * (0.92f + 0.08f * subTransition);
+            // Keep a small connection to the approved driven bass at the dance
+            // anchor; its remaining 8% disappears toward the dedicated 808.
             // Complementary gains avoid stacking two full-level fundamentals.
             float output = ((1.0f - blend) * acoustic + blend * electronic)
                 * nominalHeadroom_ * gainCurrent_;
@@ -613,11 +647,10 @@ private:
 
         // Additive waves deliberately contain only a bounded set of harmonics.
         // Each partial fades out before Nyquist, including during bend/glide.
-        // The dance spectrum combines a saturated saw/pulse character over 64
-        // partials. Its upper edge briefly opens on an articulated note, while
-        // the sustain remains rich. The 808 has more 3rd/5th/7th/9th harmonic
-        // character, with a useful odd-harmonic tail through the 63rd partial.
-        // Body fundamental, pitch drop and nominal stage gain are unchanged.
+        // The dance spectrum keeps a controlled saw/pulse character with a
+        // progressively softer top. The 808 has a strong fundamental and a few
+        // restrained overtones; the higher-frequency strike is only a short click.
+        // Pitch, phase and the low-frequency punch remain continuous and tuned.
         const double twiceCosine = 2.0 * std::cos(synthPhase_);
         double previousSine = 0.0;
         double sine = std::sin(synthPhase_);
@@ -644,11 +677,17 @@ private:
             previousCosine = cosine;
             cosine = nextCosine;
         }
-        const float stageGain = 1.50f + 0.45f * eightOhEight;
+        // Rebalance the dance anchor for its larger clean-synth share. The 808
+        // stage level and master gain are unchanged; its energy was redistributed.
+        const float stageGain = 1.38f + 0.57f * eightOhEight;
         // A short coherent low-frequency push plus a separate harmonic strike
-        // creates attack/body contrast without a static master-volume lift.
+        // preserves the attack. At the 808 end only the upper click is shorter
+        // and quieter; the full low-frequency punch is not attenuated.
+        const float clickEnvelope = punchEnvelope_
+            * (1.0f - eightOhEight + eightOhEight * punchEnvelope_);
+        const float clickGain = 0.42f - 0.24f * eightOhEight;
         const float articulated = wave
-            + punchEnvelope_ * (1.80f * fundamental + 0.70f * strike);
+            + punchEnvelope_ * 1.80f * fundamental + clickEnvelope * clickGain * strike;
         const float output = articulated * synthEnvelope_ * synthVelocity_ * synthLevel_ * stageGain;
         synthPhase_ += 2.0 * pi_ * frequency / sampleRate_;
         if (synthPhase_ >= 2.0 * pi_) synthPhase_ -= 2.0 * pi_;

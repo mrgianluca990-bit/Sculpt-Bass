@@ -1,0 +1,6 @@
+Morph 0: RMS -25.9411 dBFS, peak 0.1414
+Morph 0.25: RMS -26.6193 dBFS, peak 0.149657
+Morph 0.5: RMS -25.0016 dBFS, peak 0.119645
+Morph 0.75: RMS -21.7376 dBFS, peak 0.307439
+Morph 1: RMS -18.5293 dBFS, peak 0.446882
+Actual bank: 120 files; duration 35.0142 s; peak 0.446882; no normalisation or post processing.

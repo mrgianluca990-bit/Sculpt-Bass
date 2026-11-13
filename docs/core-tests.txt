@@ -1,0 +1,1 @@
+PASS: sample selection, RR, morph anchors, tuning, note lifecycle, block invariance, realtime allocation checks
