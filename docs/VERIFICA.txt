@@ -1,0 +1,69 @@
+SCULPT BASS 0.1.0 — REVISIONE TIMBRICA 4
+Data: 12 novembre 2026
+
+Intervento:
+- Dance al 75% e 808 al 100%: più attacco e più armoniche nel corpo della nota.
+- Transiente dedicato con salita continua di 0,75 ms e decadimento esponenziale di 12 ms; effetto principale nei primi 20–30 ms.
+- Il transiente combina un rinforzo coerente della fondamentale con un pacchetto armonico separato.
+- Dance: fino a 64 parziali, più energia nelle armoniche superiori e quota del 18% del basso distorto registrato.
+- 808: armoniche dispari utili estese fino alla 63ª, fondamentale del corpo e pitch-drop conservati.
+- Corpo e transiente armonico limitati in banda; fase continua, nessun nuovo attacco nel legato.
+- I nuovi stati seguono note-off e panic e non richiedono allocazioni nel rendering.
+- Livello del master e riferimento della banca inclusa invariati. Un tetto al livello della sintesi riserva margine di picco solo per eventuali banche molto più forti.
+- Naturali allo 0%/25%, distorto al 50%, campioni, round robin, API e interfaccia conservati.
+
+Verificato per questa revisione nell'ambiente Linux:
+- Compilazione C++17 con -O2 -Wall -Wextra -pedantic: PASS, senza warning.
+- Suite del motore: PASS, exit code 0.
+- Contrasto fra attacco e corpo su entrambe le ancore elettroniche: PASS.
+- Ribattute del synth, morph continuo, accordatura, note duplicate/canali, rilascio e panic: PASS.
+- Selezione campioni/dinamiche/RR e abbinamento delle riprese mp: PASS.
+- Indipendenza dalla dimensione dei blocchi: PASS.
+- Assenza di allocazioni nei percorsi MIDI/render sottoposti al test: PASS.
+- Demo generato dal motore e dai 120 campioni effettivi, senza normalizzazione delle singole tappe.
+- Durata demo: 35.014 s, mono PCM16, 44,1 kHz.
+- Picco complessivo del demo: -6.36 dBFS; campioni in clipping: 0.
+
+Confronto con la revisione timbrica 3:
+Stesso riff di 16 note, stessi tempi e velocity, output lineare 0,8.
+Gli RMS delle tappe comprendono gli spazi fra le note ed escludono la pausa
+finale di 0,7 s. Le misure non sostituiscono la valutazione all'ascolto.
+- Morph 0%: RMS precedente -25.94 dBFS; attuale -25.94 dBFS; differenza +0.00 dB.
+- Morph 25%: RMS precedente -26.62 dBFS; attuale -26.62 dBFS; differenza +0.00 dB.
+- Morph 50%: RMS precedente -24.57 dBFS; attuale -24.57 dBFS; differenza +0.00 dB.
+- Morph 75%: RMS precedente -23.02 dBFS; attuale -21.94 dBFS; differenza +1.08 dB.
+- Morph 100%: RMS precedente -19.74 dBFS; attuale -18.59 dBFS; differenza +1.15 dB.
+
+Contrasto d'attacco:
+RMS aggregato dei primi 30 ms delle 16 note confrontato con l'RMS aggregato
+fra 100 e 250 ms. Si tratta di una misura d'energia temporale, non di LUFS.
+- Dance: attacco/corpo precedente +0.30 dB; attuale +3.86 dB.
+- 808: attacco/corpo precedente +0.32 dB; attuale +4.15 dB.
+
+Armoniche nel corpo:
+Quota d'energia sopra 800 Hz, calcolata con finestre Hann separatamente nei
+tratti 100–250 ms di ogni nota e sommata sulle 16 note. È una misura spettrale,
+non una stima del volume percepito.
+- Dance: precedente 5.43%; attuale 12.90%.
+- 808: precedente 0.70%; attuale 11.38%.
+
+Conservazione delle prime tre tappe:
+- I segmenti del riff allo 0%, 25% e 50% sono identici bit per bit ai rispettivi segmenti della revisione 3: zero campioni PCM16 differenti su 236368 per tappa.
+
+Verifiche precedenti, non ripetute per questa revisione timbrica:
+- AddressSanitizer e UndefinedBehaviorSanitizer eseguiti sulla prima revisione: PASS; LeakSanitizer non disponibile nel runtime sotto ptrace.
+- Sintassi Processor/Editor con veri header JUCE 8.0.4: PASS sulla prima revisione. Per BinaryData sono state usate dichiarazioni equivalenti; nessun collegamento del plugin effettuato. Da allora il wrapper ha ricevuto solo modifiche testuali al tooltip.
+- Script di build e struttura YAML del workflow: validi e invariati.
+- Integrità SHA dei 120 originali e checksum dei 120 WAV preparati: PASS; banca invariata.
+- Manifest completo, mono PCM16 a 44,1 kHz, nomi risorse unici: PASS.
+- Mappatura dell'ottava verificata sul segnale; le piccole variazioni d'intonazione originali sono conservate.
+
+Da eseguire su macOS:
+- Compilazione e collegamento VST3 universale Apple Silicon/Intel.
+- Apertura del plugin reale e controllo visivo dell'interfaccia.
+- Prova in DAW, automazione, salvataggio/riapertura e bounce.
+- Valutazione musicale del timbro, del transiente e dei passaggi intermedi nei diversi registri.
+
+Questo pacchetto contiene i sorgenti e una dimostrazione audio del motore.
+Non contiene un VST3 già compilato. L'anteprima è stata verificata
+strumentalmente; non è stata valutata all'ascolto dall'assistente.

@@ -1,0 +1,22 @@
+SCULPT BASS — ANTEPRIMA DEL MOTORE
+Versione 0.1.0 — revisione timbrica 4
+
+SculptBass-demo.wav è generato dal motore C++ del progetto con i 120 campioni reali inclusi.
+Non è una registrazione del VST3 compilato su macOS.
+
+Tempi indicativi, arrotondati al secondo. Durata complessiva: circa 35 secondi.
+
+0:00–0:06  Naturale rotondo: stesso riff, Morph allo 0%; ripresa mp e trattamento leggero.
+0:06–0:12  Naturale più aperto: stesso riff, Morph al 25%; mp prevalente e un poco più di presenza.
+0:12–0:18  Distorto: stesso riff, Morph al 50%; carattere della revisione precedente conservato.
+0:18–0:24  Synth dance: stesso riff, Morph al 75%; più attacco e armoniche più forti ed estese anche nel corpo.
+0:24–0:30  808 aggressivo: stesso riff, Morph al 100%; attacco più marcato, sub pieno e corpo più ricco di armoniche.
+0:30–0:34  Nota tenuta: movimento continuo da 0% a 100% e ritorno a 0%.
+0:34–0:35  Rilascio finale.
+
+La grafica del plugin resta quella di Sculpt Drums, con titolo Sculpt Bass.
+Le cinque posizioni sono tappe dello stesso controllo continuo, senza nuovi controlli.
+I due naturali e il distorto mantengono il carattere della revisione 3.
+Note, velocity, tempistiche e gain corrispondono alla revisione 3 per confrontare direttamente i timbri.
+
+La parte 808 contiene frequenze gravi: per valutarla usa cuffie o monitor adatti.
