@@ -51,7 +51,7 @@ SculptBassEditor::SculptBassEditor (SculptBassProcessor& p)
     }
     morph.setName ("Morph");
     morph.setDoubleClickReturnValue (true, 0.0);
-    morph.setTooltip ("Naturale rotondo 0% — Naturale più aperto 25% — Distorto 50% — Synth dance 75% — 808 aggressivo 100%. Doppio clic: naturale rotondo.");
+    morph.setTooltip ("Naturale rotondo 0% — Naturale più aperto 25% — Distorto 40% — Synth dance 65% — 808 100%. Doppio clic: naturale rotondo.");
     volume.setName ("Volume");
     volume.setDoubleClickReturnValue (true, 0.0);
     volume.setTextValueSuffix (" dB");
